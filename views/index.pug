@@ -1,5 +1,19 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+ h1= title
+  p Welcome to Navya Devineni's LocalLibrary.
+
+
+  h1 Dynamic content
+
+  if error
+    p Error getting dynamic content.
+    else
+
+    p The Genre list has the following record counts:
+
+    ul
+      
+      
+      li #[strong Genres:] !{data.genre_count}
