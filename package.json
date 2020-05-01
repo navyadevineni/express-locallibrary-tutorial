@@ -1,3 +1,4 @@
+
 {
   "name": "express-locallibrary-tutorial",
   "version": "0.0.0",
@@ -25,5 +26,20 @@
   },
   "devDependencies": {
     "nodemon": "^1.18.10"
-  }
+  },
+  "description": "Model–view–controller (usually known as MVC) is a software design pattern[1] commonly used for developing user interfaces which divides the related program logic into three interconnected elements.",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/navyadevineni/express-locallibrary-tutorial.git"
+  },
+  "keywords": [
+    "express"
+  ],
+  "author": "Navya Devineni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/navyadevineni/express-locallibrary-tutorial/issues"
+  },
+  "homepage": "https://github.com/navyadevineni/express-locallibrary-tutorial#readme"
 }
