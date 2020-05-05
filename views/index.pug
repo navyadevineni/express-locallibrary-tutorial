@@ -3,7 +3,6 @@ extends layout
 block content
   h1= title
    p Welcome to #[em Navya's library]
-  img.imgclass(src="https://lh3.googleusercontent.com/proxy/kVbT_jfzAK6UTn0SuckWmpIao-w-L_YhDoLS3IVfPlV9ZzFjSVDd0mtl71GL6WePXX8Xj8aQapg4dWm2e33dBgoO0yZsN7qFGMP0WIz7WJrOEOQ6iqQ" alt="Image")
      h1 Dynamic content
 
   if error
@@ -18,3 +17,5 @@ block content
       li #[strong Copies available:] !{data.book_instance_available_count}
       li #[strong Authors:] !{data.author_count}
       li #[strong Genres:] !{data.genre_count}
+
+  img.imgclass(src="https://lh3.googleusercontent.com/proxy/kVbT_jfzAK6UTn0SuckWmpIao-w-L_YhDoLS3IVfPlV9ZzFjSVDd0mtl71GL6WePXX8Xj8aQapg4dWm2e33dBgoO0yZsN7qFGMP0WIz7WJrOEOQ6iqQ" alt="Image")
