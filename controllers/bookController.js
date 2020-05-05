@@ -65,7 +65,7 @@ exports.book_detail = function(req, res, next) {
     }, function(err, results) {
         if (err) { return next(err); }
         if (results.book==null) { // No results.
-            let err = new Error('Book not found');
+            var err = new Error('Book not found');
             err.status = 404;
             return next(err);
         }
@@ -239,14 +239,14 @@ exports.book_update_get = function(req, res, next) {
         }, function(err, results) {
             if (err) { return next(err); }
             if (results.book==null) { // No results.
-                let err = new Error('Book not found');
+                var err = new Error('Book not found');
                 err.status = 404;
                 return next(err);
             }
             // Success.
             // Mark our selected genres as checked.
-            for (let all_g_iter = 0; all_g_iter < results.genres.length; all_g_iter++) {
-                for (let book_g_iter = 0; book_g_iter < results.book.genre.length; book_g_iter++) {
+            for (var all_g_iter = 0; all_g_iter < results.genres.length; all_g_iter++) {
+                for (var book_g_iter = 0; book_g_iter < results.book.genre.length; book_g_iter++) {
                     if (results.genres[all_g_iter]._id.toString()==results.book.genre[book_g_iter]._id.toString()) {
                         results.genres[all_g_iter].checked='true';
                     }
@@ -335,3 +335,4 @@ exports.book_update_post = [
         }
     }
 ];
+

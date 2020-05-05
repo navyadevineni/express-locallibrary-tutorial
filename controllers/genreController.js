@@ -36,7 +36,7 @@ exports.genre_detail = function(req, res, next) {
     }, function(err, results) {
         if (err) { return next(err); }
         if (results.genre==null) { // No results.
-            let err = new Error('Genre not found');
+            var err = new Error('Genre not found');
             err.status = 404;
             return next(err);
         }
@@ -161,7 +161,7 @@ exports.genre_update_get = function(req, res, next) {
     Genre.findById(req.params.id, function(err, genre) {
         if (err) { return next(err); }
         if (genre==null) { // No results.
-            let err = new Error('Genre not found');
+            var err = new Error('Genre not found');
             err.status = 404;
             return next(err);
         }
