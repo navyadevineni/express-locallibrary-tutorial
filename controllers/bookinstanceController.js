@@ -1,6 +1,6 @@
-let BookInstance = require('../models/bookinstance')
-let Book = require('../models/book')
-let async = require('async')
+var BookInstance = require('../models/bookinstance')
+var Book = require('../models/book')
+var async = require('async')
 
 const { body,validationResult } = require('express-validator/check');
 const { sanitizeBody } = require('express-validator/filter');
@@ -69,7 +69,7 @@ exports.bookinstance_create_post = [
         const errors = validationResult(req);
 
         // Create a BookInstance object with escaped and trimmed data.
-        let bookinstance = new BookInstance(
+        var bookinstance = new BookInstance(
           { book: req.body.book,
             imprint: req.body.imprint,
             status: req.body.status,

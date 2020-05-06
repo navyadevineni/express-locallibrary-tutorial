@@ -1,12 +1,12 @@
-let Book = require('../models/book');
-let Author = require('../models/author');
-let Genre = require('../models/genre');
-let BookInstance = require('../models/bookinstance');
+var Book = require('../models/book');
+var Author = require('../models/author');
+var Genre = require('../models/genre');
+var BookInstance = require('../models/bookinstance');
 
 const { body,validationResult } = require('express-validator/check');
 const { sanitizeBody } = require('express-validator/filter');
 
-let async = require('async');
+var async = require('async');
 
 exports.index = function(req, res) {
 
@@ -123,7 +123,7 @@ exports.book_create_post = [
         const errors = validationResult(req);
 
         // Create a Book object with escaped and trimmed data.
-        let book = new Book(
+        var book = new Book(
           { title: req.body.title,
             author: req.body.author,
             summary: req.body.summary,
