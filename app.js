@@ -1,26 +1,26 @@
-let createError = require('http-errors');
-let express = require('express');
-let path = require('path');
-let cookieParser = require('cookie-parser');
-let logger = require('morgan');
+var createError = require('http-errors');
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
 
-let indexRouter = require('./routes/index');
-let usersRouter = require('./routes/users');
-let catalogRouter = require('./routes/catalog');  //Import routes for "catalog" area of site
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
+var catalogRouter = require('./routes/catalog');  //Import routes for "catalog" area of site
 
-let compression = require('compression');
-let helmet = require('helmet');
+var compression = require('compression');
+var helmet = require('helmet');
 
-let app = express();
+var app = express();
 
 
 // Set up mongoose connection
-let mongoose = require('mongoose');
-let dev_db_url = 'mongodb+srv://navyadevineni:vsjgtrmf0@cluster0-uijqn.mongodb.net/local_library?retryWrites=true&w=majority'
-let mongoDB = process.env.MONGODB_URI || dev_db_url;
+var mongoose = require('mongoose');
+var dev_db_url = 'mongodb+srv://navyadevineni:vsjgtrmf0@cluster0-uijqn.mongodb.net/local_library?retryWrites=true&w=majority'
+var mongoDB = process.env.MONGODB_URI || dev_db_url;
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 mongoose.Promise = global.Promise;
-let db = mongoose.connection;
+var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 
@@ -51,20 +51,20 @@ app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
-  let createError = require('http-errors');
-  let express = require('express');
-  let path = require('path');
-  let cookieParser = require('cookie-parser');
-  let logger = require('morgan');
+  var createError = require('http-errors');
+  var express = require('express');
+  var path = require('path');
+  var cookieParser = require('cookie-parser');
+  var logger = require('morgan');
 
-  let indexRouter = require('./routes/index');
-  let usersRouter = require('./routes/users');
-  let catalogRouter = require('./routes/catalog');  //Import routes for "catalog" area of site
+  var indexRouter = require('./routes/index');
+  var usersRouter = require('./routes/users');
+  var catalogRouter = require('./routes/catalog');  //Import routes for "catalog" area of site
 
-  let compression = require('compression');
-  let helmet = require('helmet');
+  var compression = require('compression');
+  var helmet = require('helmet');
 
-  let app = express();
+  var app = express();
 
 
   // Set up mongoose connection
